@@ -63,6 +63,7 @@ def get_location():
     if bus_number and bus_number in bus_data:
         location = bus_data[bus_number]
         return jsonify({
+            'status': 'success',  # Added status field here
             'lat': location['latitude'],
             'lon': location['longitude'],
             'speed': location['speed'],
